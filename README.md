@@ -4,7 +4,9 @@ Just my own snipplet about ReactiveX in RxJava
 
 ## Create Operators
 Observable.just(someList) will give you 1 emission - a List.
+
 Observable.from(someList) will give you N emissions - each item in the list.
+
 * **Just** เป็นการสร้าง Observable ที่จะส่งข้อมูลที่ได้ทันที สำหรับข้อมูล Array โดยจะส่งข้อมูล Array ทั้งหมด
 * **From** เป็นการสร้าง Observable ที่จะส่งข้อมูลที่ได้ทันที สำหรับข้อมูล Array โดยจะส่งข้อมูลทีละตัวของ Array
 * **From Callable** เป็นการสร้าง Observable ที่ทำงานบน Callable สามารถ Handle Exception ได้
@@ -19,3 +21,6 @@ Observable.from(someList) will give you N emissions - each item in the list.
 * **Interval** เป็นการสร้าง Observable ที่จะทำงานเป็น Interval ทุกๆระยะเวลาที่กำหนดไว้ และจะทำงานไปเรื่อยๆ โดยจะส่ง Long มาให้เพื่อบอกว่าวนลูปถึงครั้งที่เท่าไรแล้ว
 * **Timer** เป็นการสร้าง Observable ที่จะทำงานในระยะเวลาข้างหน้าตามที่กำหนดไว้ โดยจะส่ง Long เข้ามาใน onNext ด้วยเหมือนกับ Interval แต่เนื่องจากมันเป็น Timer ที่ทำงานแค่ครั้งเดียว เพราะงั้นมันก็เกิด onNext แค่ครั้งเดียว แล้วส่ง Long ที่มีค่าเป็น 0 มา
 * **Defer** จะคล้าย Create แต่ว่า Observable จะยังไม่ถูกสร้างในทันทีเหมือน Create จนกว่า Observer จะ Subscribe แล้ว Defer ก็จะสร้าง Observable ขึ้นมาให้ใหม่ในตอนนั้นทันที http://goo.gl/arvo35
+
+
+
